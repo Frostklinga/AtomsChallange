@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "AtomsModel",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "Atoms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Atom"
+      }
+    }
+  },
+  "definitions": {
+    "Atom": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "number",
+        "symbol",
+        "name",
+        "weight"
+      ],
+      "properties": {
+        "number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "symbol": {
+          "type": "string",
+          "maxLength": 2,
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "weight": {
+          "type": "number",
+          "format": "decimal"
+        }
+      }
+    }
+  }
+}

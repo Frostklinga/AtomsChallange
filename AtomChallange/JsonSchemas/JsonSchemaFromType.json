@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Atom",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "number",
+    "symbol",
+    "name",
+    "weight"
+  ],
+  "properties": {
+    "number": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "symbol": {
+      "maxLength": 2,
+      "minLength": 2,
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "number",
+      "format": "decimal"
+    }
+  }
+}
